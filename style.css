@@ -170,7 +170,7 @@ li a {
 
 .order-components {
   width: 350px;
-  height: 550px;
+  height: 600px;
 
   position: relative;
   overflow: hidden;
@@ -187,11 +187,12 @@ li a {
   justify-content: center;
   position: absolute;
   left: 0px;
+  top: 30px;
   /* transition: transform 2s; */
 }
 
 .order-food-image {
-  width: 60%;
+  width: 70%;
   object-fit: scale-down;
 }
 
@@ -212,22 +213,20 @@ li a {
   /* margin: 0 1em; */
   padding: 0 1em;
   margin-bottom: 2em;
-  font-size: .9rem;
+  font-size: 1rem;
 }
 
 .price {
   position: absolute;
   transform: rotate(270deg);
-  right: -15px;
+  right: -30px;
   top: -130px;
   font-size: 2.5rem;
-  color:rgb(233, 233, 233);
+  color:rgb(119, 70, 70);
 }
 
 .book {
   text-decoration: none;
-  /* border-radius: 8px; */
-  /* font-size: .9rem; */
   color: white;
   background-color: red;
   padding: .6em 1em;
@@ -287,8 +286,8 @@ li a {
   justify-content: center;
   margin-top: -2em;
   position: absolute;
-  top: 17%;
-  left: 20px;
+  top: 20%;
+  left: 30px;
 }
 .dot {
   width: 15px;
@@ -310,9 +309,8 @@ li a {
   display: flex;
   text-align: left;
   margin-left: 2.5em;
-  /* position: absolute; */
-  position: relative;
-  top: 82%;
+  position: absolute;
+  bottom: 0px;
 }
 
 .eating-time p {
@@ -334,15 +332,14 @@ li a {
 }
 
 .popular-meal h3, .popular-menu h3 {
-  font-size: .9rem;
-  font-weight: lighter;
+  font-size: 1.1rem;
   text-transform: uppercase;
 }
 
 .popular-meal h2, .popular-menu h2 {
   z-index: 1;
+  font-size: 1.5rem;
   color: red;
-  text-shadow: 0px 2px 2px rgba(0, 0, 0, .3);
 }
 
 .ar-design {
@@ -357,6 +354,8 @@ li a {
   width: 50px;
   position: absolute;
   top: 10px;
+  left: 60%;
+  filter: blur(3px);
   z-index: -1;
 }
 
@@ -369,30 +368,30 @@ li a {
 }
 
 .meal-list:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .meal-image {
-  width: 100px;
+  width: 50%;
 }
 
 .meal-country {
   text-transform: uppercase;
-  font-size: .7rem;
-  margin: .5em 0;
+  font-size: .9rem;
+  margin: .3em 0;
 }
 
 .meal-name {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  margin: .5em 0;
+  margin: .3em 0;
   color: rgb(211, 4, 4);
 }
 
 .add-cart {
   color: white;
   background-color: black;
-  padding: .5em .8em;
+  padding: 1em 1.8em;
   font-size: .9rem;
 
   display: flex;
@@ -492,11 +491,12 @@ li a {
 .series-image {
   width: 50px;
   border-radius: 100%;
+  margin-right: 5px;
 }
 
 /* Series Display */
 .series-display {
-  margin-top: 2em;
+  /* margin-top: 2em; */
   background-color:rgb(236, 236, 236);
   z-index: 0;
   padding:1.5em;
@@ -510,7 +510,11 @@ li a {
 
 .series-heading {
   text-transform: uppercase;
-  font-size: .8rem;
+  font-size: 1rem;
+}
+
+.popular-menu h2 {
+  margin: .2em 0;
 }
 
 .series-wording {
@@ -583,9 +587,7 @@ li a {
 
 
 .homepage-background {
-  /* width: 100%; */
   position: absolute;
-  top: 100px;
   left: 30px;
   opacity: .1;
 }
@@ -595,33 +597,34 @@ li a {
   position: relative;
 }
 
-.tomatoes {
+/* .tomatoes {
   position: absolute;
   width: 70px;
   top: 20px;
   right: 50px;
-  /* left: 100px; */
 
-}
+} */
 .menu-lists {
-  margin-top: 2em;
-  display: grid;
-  grid-auto-rows: minmax(100px, auto);
-  /* width: 100px; */
+  margin-top: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .menu-list {
-  /* background-color: grey; */
   margin: 0 2.5em;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: .5em;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, .3);
   position: relative;
   transform: scale(1);
   margin-bottom: 2em;
   transition: 1s;
+  width: 250px;
   height: 250px;
 }
 
@@ -659,7 +662,7 @@ li a {
 
 .about-listname {
   margin:.5em 0;
-  font-weight: lighter;
+  font-size: 1rem;
 }
 .menu-image {
   width: 100px;
@@ -692,7 +695,7 @@ li a {
   text-decoration: none;
   color: white;
   background: red;
-  padding: .7em 1em;
+  padding: .8em 1.9em;
   font-size: 1rem;
   position: relative;
   transition: 1s;
@@ -763,7 +766,7 @@ li a {
 }
 
 .download-app p {
-  font-size: .9rem;
+  font-size: 1.1srem;
 }
 
 .mobile-image {
@@ -778,8 +781,8 @@ li a {
 }
 
 .testimonial-lists {
-  width: 300px;
-  height: 450px;
+  width: 350px;
+  height: 500px;
   margin: 0 auto;
   margin-top: 2em;
 
@@ -789,7 +792,7 @@ li a {
 }
 
 .testi {
-  width: 300px;
+  width: 350px;
   height: 400px;
   text-align: center;
   padding: .5em;
@@ -933,6 +936,16 @@ form button {
 
 .copyright {
   text-align: center;
+}
+
+
+@media (min-width: 400px){
+  .homepage h3{
+    font-size: 1rem;
+  }
+  .order-components {
+    margin-top: -30px;
+  }
 }
 
 

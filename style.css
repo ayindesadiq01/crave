@@ -211,7 +211,7 @@ li a {
 .about-order p {
   line-height: 1.5em;
   /* margin: 0 1em; */
-  padding: 0 1em;
+  /* padding: 0 1em; */
   margin-bottom: 2em;
   font-size: 1rem;
 }
@@ -219,7 +219,7 @@ li a {
 .price {
   position: absolute;
   transform: rotate(270deg);
-  right: -30px;
+  right: -35px;
   top: -130px;
   font-size: 2.5rem;
   color:rgb(119, 70, 70);

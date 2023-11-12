@@ -790,7 +790,6 @@ li a {
 
   position: relative;
   overflow: hidden;
-  background-color: grey;
 }
 
 .testi {
@@ -958,7 +957,6 @@ form button {
     padding-bottom: .5em;
     margin-bottom: .5em;
     border-bottom: 2px solid red;
-    
   }
 
   .testimonial-image h4 {
@@ -968,7 +966,6 @@ form button {
   .testimonial-image p {
     font-size: 1rem;
   }
-
 }
 
 @media (min-width: 500px) {
@@ -1156,7 +1153,6 @@ form button {
     text-align: left;
     font-size: 1rem;
     line-height:1.5em;
-    
   }
 
   .bttn {

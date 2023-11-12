@@ -169,7 +169,7 @@ li a {
 }
 
 .order-components {
-  width: 350px;
+  width: 100%;
   height: 600px;
 
   position: relative;
@@ -179,8 +179,8 @@ li a {
 }
 
 .order-info {
-  width: 350px;
-  height: 500px;
+  width: 100%;
+  height: 550px;
 
   display: flex;
   align-items: center;
@@ -219,7 +219,7 @@ li a {
 .price {
   position: absolute;
   transform: rotate(270deg);
-  right: -35px;
+  right: -40px;
   top: -130px;
   font-size: 2.5rem;
   color:rgb(119, 70, 70);
@@ -308,7 +308,7 @@ li a {
 .eating-time {
   display: flex;
   text-align: left;
-  margin-left: 2.5em;
+  margin-left: 3.7em;
   position: absolute;
   bottom: 0px;
 }
@@ -522,7 +522,7 @@ li a {
 }
 
 .series-display-image {
-  width: 100%;
+  width: 50%;
   margin-top: 1em;
 
 }
@@ -781,7 +781,7 @@ li a {
 }
 
 .testimonial-lists {
-  width: 350px;
+  width: 100%;
   height: 500px;
   margin: 0 auto;
   margin-top: 2em;
@@ -792,7 +792,7 @@ li a {
 }
 
 .testi {
-  width: 350px;
+  width: 100%;
   height: 400px;
   text-align: center;
   padding: .5em;
@@ -806,7 +806,6 @@ li a {
 .testimonial-image img {
   width: 100%;
   padding-bottom: 1em;
-  border-bottom: 2px solid red;
 }
 
 .testimonial-image p {
@@ -816,7 +815,7 @@ li a {
 .bttn {
   position: absolute;
   bottom: 0px;
-  right: 0;
+  right: 40px;
 
   display: flex;
   align-items: center;
@@ -939,15 +938,41 @@ form button {
 }
 
 
-@media (min-width: 400px){
+@media (min-width: 420px){
   .homepage h3{
     font-size: 1rem;
   }
-  .order-components {
-    margin-top: -30px;
-  }
-}
 
+  .price {
+    top: -180px;
+  }
+
+  .meal-lists {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(100px, auto);
+  }
+
+  .meal-name {
+    font-size: 1.3rem;
+  }
+
+  .testimonial-image {
+    padding-bottom: .5em;
+    margin-bottom: .5em;
+    border-bottom: 2px solid red;
+    
+  }
+
+  .testimonial-image h4 {
+    font-size: 1.3rem;
+  }
+
+  .testimonial-image p {
+    font-size: 1rem;
+  }
+
+}
 
 @media (min-width: 500px) {
 
@@ -960,7 +985,6 @@ form button {
   }
 
   .order-food-image{
-    width: 55%;
     margin-bottom: .5em;
   }
 
@@ -1004,17 +1028,6 @@ form button {
     width: 30%;
   }
 
-  .menu-lists {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .menu-list {
-    width: 250px;
-  }
-
   .download-app {
     padding: 1.5em;
   }
@@ -1048,8 +1061,6 @@ form button {
     width: 350px;
   }
 
-  .test
-
   .bttn {
     bottom: -5%;
   }
@@ -1080,4 +1091,165 @@ form button {
   .testimonial-page {
     margin-bottom: 10em;
   }
+
+  .series-wording {
+    font-size: 1.1rem;
+    padding: 0 2em;
+  }
 }
+
+@media (min-width: 600px) {
+
+  .series-text {
+    font-size: 2.8rem;
+  }
+
+  .series-wording {
+    font-size: 1.1rem;
+    padding: 0 2em;
+  }
+
+  .menu-lists {
+    /* display: flex;
+    flex-direction: row; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    width: 100%;
+    /* background-color: grey; */
+  }
+
+  .menu-list {
+    width: 250px;
+    margin: 0 1.5em;
+    margin: 0 auto;
+    margin-bottom: 2em;
+  }
+
+  .seemore {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 50%;
+    margin-top:1em 0;
+  }
+
+  .testimonial-lists {
+    width: 100%;
+    height: 400px;
+    margin-top: 0;
+    /* background-color: grey; */
+  }
+
+  .testi {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+
+  .testimonial-list {
+    display: flex;
+    align-items: center;
+  }
+
+  .testimonial-image {
+    width: 40%;
+    border-bottom: none;
+    border-right: 1.5px solid red;
+    margin: 1em;
+  }
+
+  .testimonial-image img {
+    padding-bottom: 0%;
+  }
+
+  .testimonial-wording {
+    width: 60%;
+    text-align: left;
+    font-size: 1rem;
+    line-height:1.5em;
+    
+  }
+
+  .bttn {
+    bottom: 20px;
+  }
+
+  .subscribe {
+    padding: 4em 2em;
+  }
+
+  .subscribe h3 {
+    font-size: 1.5rem;
+  }
+
+  .subscribe p {
+    font-size: 1.3rem;
+  }
+
+  form {
+    font-size: 1.5rem;
+  }
+
+  form input {
+    padding: 1.5em .5em 1.5em 1.5em;
+    border-radius: 30px;
+  }
+
+  form button {
+    padding: 1rem 1.2rem;
+    border-radius: 30px;
+    right: 5px;
+  }
+
+  .bottom-logo {
+    margin-top: 2em;
+  }
+
+  .bottom-page {
+    text-align: center;
+  }
+
+  .bottom-page div h4 {
+    font-size: 1.5rem
+  }
+
+    .bottom-page div p {
+      font-size: 1.2rem;
+      margin: 5px 0;
+    }
+}
+
+/* @media (min-width: 700px) {
+
+  .order-components {
+    height: 650px;
+  }
+  
+  .about-order p {
+    font-size: 1.1rem;
+  }
+
+  .order-info {
+    height: 550px;
+  }
+
+  .meal-lists {
+    display: flex;
+  }
+
+  .book {
+    padding: .5em .8em;
+  }
+
+  .add-cart {
+    padding: .8em 1.2em
+  }
+
+  .series-display-image {
+    width:50%;
+  }
+} */

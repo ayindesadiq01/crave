@@ -169,8 +169,8 @@ li a {
 }
 
 .order-components {
-  width: 100%;
-  height: 600px;
+  width: 350px;
+  height: 550px;
 
   position: relative;
   overflow: hidden;
@@ -187,7 +187,7 @@ li a {
   justify-content: center;
   position: absolute;
   left: 0px;
-  top: 30px;
+  top: -30px;
   /* transition: transform 2s; */
 }
 
@@ -220,7 +220,7 @@ li a {
   position: absolute;
   transform: rotate(270deg);
   right: -40px;
-  top: -130px;
+  top: -150px;
   font-size: 2.5rem;
   color:rgb(119, 70, 70);
 }
@@ -286,7 +286,7 @@ li a {
   justify-content: center;
   margin-top: -2em;
   position: absolute;
-  top: 20%;
+  top: 100px;
   left: 30px;
 }
 .dot {
@@ -308,7 +308,7 @@ li a {
 .eating-time {
   display: flex;
   text-align: left;
-  margin-left: 3.7em;
+  margin-left: 2.3em;
   position: absolute;
   bottom: 0px;
 }
@@ -469,6 +469,7 @@ li a {
   overflow: none;
   overflow-x: auto;
   background-color:rgb(238, 237, 237);
+  margin-bottom: 1em;
 }
 
 .series::-webkit-scrollbar {
@@ -496,11 +497,11 @@ li a {
 
 /* Series Display */
 .series-display {
-  /* margin-top: 2em; */
   background-color:rgb(236, 236, 236);
   z-index: 0;
   padding:1.5em;
   text-align: center;
+  margin: 0 auto;
 }
 
 .series-text {
@@ -519,12 +520,19 @@ li a {
 
 .series-wording {
   margin-bottom: 1em;
+  text-align: center;
+  font-size: 1.1rem;
 }
 
 .series-display-image {
-  width: 50%;
+  width: 350px;
+  margin:0 auto;
   margin-top: 1em;
+}
 
+.getstarted {
+  margin: 0 auto;
+  width: 120px;
 }
 
 .get-started {
@@ -583,6 +591,7 @@ li a {
 
 .active-detail {
   display: grid;
+  margin: 0 auto;
 }
 
 
@@ -597,13 +606,6 @@ li a {
   position: relative;
 }
 
-/* .tomatoes {
-  position: absolute;
-  width: 70px;
-  top: 20px;
-  right: 50px;
-
-} */
 .menu-lists {
   margin-top: 2.5em;
   display: flex;
@@ -781,14 +783,14 @@ li a {
 }
 
 .testimonial-lists {
-  width: 100%;
+  width: 300px;
   height: 500px;
   margin: 0 auto;
   margin-top: 2em;
 
   position: relative;
   overflow: hidden;
-
+  background-color: grey;
 }
 
 .testi {
@@ -815,7 +817,7 @@ li a {
 .bttn {
   position: absolute;
   bottom: 0px;
-  right: 40px;
+  right: 0px;
 
   display: flex;
   align-items: center;
@@ -858,7 +860,6 @@ li a {
   top: -30px;
   opacity: .3;
   transform: rotate(300deg);
-  /* z-index: -1; */
 }
 
 .subscribe p {
@@ -943,10 +944,6 @@ form button {
     font-size: 1rem;
   }
 
-  .price {
-    top: -180px;
-  }
-
   .meal-lists {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -976,13 +973,13 @@ form button {
 
 @media (min-width: 500px) {
 
-  .order-components, .order-info {
+  /* .order-components, .order-info {
     width: 400px;
   }
 
   .order-info {
     height: 470px;
-  }
+  } */
 
   .order-food-image{
     margin-bottom: .5em;
@@ -999,10 +996,6 @@ form button {
   .price {
     color: rgb(110, 75, 75);
   }
-
-  .eating-time {
-    margin-left: 3.8em;
-  } 
 
   .dots {
     left: 30px;
@@ -1054,15 +1047,7 @@ form button {
 
   .testimonial-lists {
     width: 350px;
-    height: 520px;
-  }
-
-  .testi {
-    width: 350px;
-  }
-
-  .bttn {
-    bottom: -5%;
+    height: 550px;
   }
 
   .active-no {
@@ -1237,9 +1222,7 @@ form button {
     height: 550px;
   }
 
-  .meal-lists {
-    display: flex;
-  }
+  
 
   .book {
     padding: .5em .8em;

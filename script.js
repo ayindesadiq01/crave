@@ -1,10 +1,13 @@
 'use strict';
 const menu = document.querySelector('.menu');
 const link_items = document.querySelector('.navigation-bar');
+const bgBlur =document.querySelector('.background-blur');
 const container = document.querySelector('.container')
 
 menu.addEventListener('click', () => {
   menu.classList.toggle('openmenu');
+  link_items.classList.toggle('hidden');
+  bgBlur.classList.toggle('hidden')
 })
 
 const orderInfo = document.querySelectorAll('.order-info');

@@ -26,6 +26,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 4;
 }
 
 
@@ -34,6 +35,7 @@ body {
   height: 40px;
   position: relative;
   margin: 4px;
+  z-index: 4;
 }
 
 .menu span {
@@ -78,7 +80,7 @@ body {
 } 
 
 .container {
-  padding: .5em;
+  /* padding: .5em; */
   width: 100%;
   position: relative;
 }
@@ -108,11 +110,15 @@ body {
 /* Navigation BAr */
 .navigation-bar {
   position: absolute;
-  top: 70%;
+  top: 70px;
   left: 50%;
+  /* position: relative; */
   background-color: rgb(255, 230, 230);
   width: 50%;
-
+  height: 100vh;
+  z-index: 4;
+  opacity: 0;
+  transition: opacity 1s;
   /* transform: translateX(50%); */
 }
 
@@ -151,15 +157,32 @@ li a {
   color: black;
 }
 
-.hidden {
-  display: none;
+.background-blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(7, 5, 5, 0.4);
+  filter: blur(20px);
+  /* backdrop-filter: 10px; */
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 2;
 }
+
+.hidden {
+  /* display: none; */
+  opacity: 1;
+}
+
 
 /* HOMEPAGE */
 .homepage {
   text-align: center;
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 
 .homepage h3 {
@@ -246,8 +269,6 @@ li a {
   position: absolute;
   top: -6px;
   left: -6px;
-  /* width: 20px;
-  height: 20px; */
   width: 0;
   height: 0;
   border-top: 2px solid black;
@@ -802,8 +823,6 @@ li a {
   transition: 1s;
 }
 
-
-
 .testimonial-image img {
   width: 100%;
   padding-bottom: 1em;
@@ -835,7 +854,6 @@ li a {
   font-size: 2.5rem;
   color: red;
 }
-
 
 .testimonial-word {
   font-size: .9rem;
@@ -1061,7 +1079,9 @@ form button {
 
   .subscribe {
     position: absolute;
-    margin: 0 2em;
+    /* margin: 0 2em; */
+    width: 80%;
+    left: 50px;
     top: -120px;
     padding: 4em 2em;
   }
@@ -1109,9 +1129,6 @@ form button {
   }
 
   .seemore {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
     left: 50%;
     margin-top:1em 0;
@@ -1204,31 +1221,450 @@ form button {
     }
 }
 
-/* @media (min-width: 700px) {
+@media (min-width: 650px) {
 
-  .order-components {
-    height: 650px;
+  .meal-lists {
+    display: flex;
   }
-  
+
+  .add-cart {
+    padding: .5em .9em
+  }
+
+  .meal-list{
+    width: 250px;
+  }
+}
+
+@media (min-width: 700px) {
+  .top-navigation {
+    position: relative;
+    align-items: center;
+    padding: 10px 0;
+    margin-bottom: 1em;
+  }
+
+  .logo-box {
+    width: 10%;
+  }
+  .navigation-bar {
+    opacity: 1;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 20px;
+    width: 85%;
+  }
+
+  .list-item {
+    display: flex;
+    padding: 0;
+  }
+
+  .list-item li a {
+    margin-right: 1em;
+    padding: 1em 0;
+    position: relative;
+    transition: all 1s;
+  }
+
+  .list-item li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 0px;
+    height: 2px;
+    background-color: red;
+    transition: all 1s;
+  }
+
+  .list-item li a:hover::before{
+    width: 100%;
+  }
+
+  .navigation-icon {
+    display: none;
+  }
+
+  .side-icon-bx li img {
+    margin: 0 .7em;
+    padding: .3em;
+  }
+
+  .subscribe {
+    left: 10%;
+  }
+}
+
+@media (min-width:800px) {
+
+  .navigation-bar {
+    width: 80%;
+  }
+  .list-item li a {
+    margin-right: 1.5em;
+  }
+
   .about-order p {
     font-size: 1.1rem;
   }
 
+  .order-components {
+    width: 400px;
+    height: 600px;
+  }
+
   .order-info {
-    height: 550px;
+    height: 600px;
+  }
+
+  .eating-time {
+    margin-left: 3.7em;
+  }
+
+  .menu-lists {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .menu-list {
+    width: 200px;
+    height: 250px;
+  }
+
+  .seemore {
+    margin: 0 auto;
+    left: 100%;
+  }
+
+  .app-text p {
+    margin: 0 7em;
+  }
+
+  .mobile-image {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .testimonial-lists {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .location-image {
+    left:150px;
+  }
+
+  .subscribe {
+    width: 60%;
+    left: 150px;
+  }
+}
+
+@media (min-width: 850px) {
+  .homepage {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .the-box {
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+  }
+  .order-components {
+    width: 80%;
+    height: 400px;
+  }
+
+  .order-info {
+    height: 400px;
+    top: -50px;
+    justify-content: space-between;
+  }
+
+  .order-flex {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .order-food-image {
+    width: 80%;
+  }
+
+  .price {
+    position: absolute;
+    /* position: relative; */
+    z-index: 5;
+    color: red;
+    transform: rotate(270deg);
+    font-size: 1.8rem;
+    top: 50%;
+    left: 355px;
+  }
+
+  .order-food {
+    order: 2;
+    width: 48%;
+    position: relative;
+    left: 35px;
+  }
+
+  .about-order {
+    order: 1;
+    width: 45%;
+    text-align: left;
+  }
+
+  .about-order h2 {
+    font-size: 2rem;
+  }
+
+  .about-order p {
+    font-size: .9rem;
+  }
+
+  .background-blur {
+    z-index: -5;
+  }
+
+  .eating-time {
+    position: relative;
+    top: 300px;
+    margin-left: 0;
+  }
+
+  .dots {
+    top: 150px;
+  }
+
+  .popular-meal, .food-series, .popular-menu, .download-app, .testimonial-page {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .testimonial-wording {
+    font-size: 1rem;
+  }
+
+  .subsscribe {
+    padding: inherit 2em;
+    position: relative;
+    top: 0;
+  }
+
+  .subscribe h3 {
+    font-size: 1.5rem;
+  }
+
+  .subscribe p {
+    font-size: 1rem;
+  }
+
+  .testimonial-lists {
+    height: 400px;
+  }
+
+  .testi {
+    width: 100%;
+    height: 300px;
+  }
+
+  .testimonial-page {
+    margin-bottom: 6em;
+  }
+}
+
+@media (min-width: 900px) {
+  .order-flex {
+    position: relative;
+  }
+  .about-order p {
+    font-size: 1rem;
+  }
+
+  .order-components {
+    height: 450px;
+  }
+
+  .order-info {
+    height: 450px;
+  }
+
+  .order-food {
+    /* padding: .5em; */
+    margin: 0;
+    width: 50%;
+    position: relative;
+    left: 30px;
+  }
+
+  .about-order {
+    width: 48%;
+  }
+
+  .popular-meal,
+  .food-series,
+  .popular-menu,
+  .download-app,
+  .testimonial-page {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .menu-lists {
+    gap: .5em;
+    margin: 0;
+  }
+
+  .popular-menu {
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1000px) {
+
+}
+
+@media (min-width: 1024px) {
+
+  .homepage {
+    width: 90%;
+    padding: 0;
+    margin: 0 auto;
+  }
+  .order-components {
+    margin-bottom: 0;
+  }
+
+  .popular-meal {
+    padding: 0;
+  }
+  .menu-list {
+    width: 220px;
+  }
+  
+  .price {
+    left:400px;
+  }
+  .testimonial-lists {
+    height: 300px;
+  }
+  
+  .app-text p {
+    margin: 0;
+  }
+  
+  .subscribe {
+    top: 0;
+    left: 220px;
+    margin: 0 auto;
+  }
+  
+  .footer {
+    padding-top: 1em;
+  }
+
+  .download-app {
+    width: 60%;
+  }
+
+  .series {
+    width:80%;
+    margin: 0 auto;
+    margin-bottom: 1em;
+  }
+
+  .series-display {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .subscribe {
+    position: relative;
+    left:0%;
+    top: 100px;
+  }
+
+  .testimonial-page {
+    margin-bottom: 0em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .homepage {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .order-components {
+    max-width: 80%;
+    max-height: 100%;
+  }
+
+  .eating-time {
+    top: 280px;
+  }
+
+  .navigation-bar {
+    width: 70%;
+  }
+
+  .navigation-bar .list-item li a {
+    margin-right: 3.5em;
+  }
+
+  .series {
+    max-width: 80%;
+  }
+
+  .meal-lists {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .bottom-page {
+    padding-top: 4em;
+  }
+}
+
+@media (min-width: 1300px) {
+  .order-components {
+    height: 500px;
+  }
+
+  .order-info {
+    height: 500px;
+  }
+
+  .order-food-image {
+    width: 70%;
+  }
+
+  .about-order {
+    width: 42%;
+  }
+
+  .about-order h2 {
+    font-size: 2.9rem;
+  }
+
+  .eating-time {
+    top: 335px;
+  }
+
+  .price {
+    left: 500px;
+  }
+
+  .homepage-background {
+    top: 30px;
+    left: 45%;
   }
 
   
-
-  .book {
-    padding: .5em .8em;
-  }
-
-  .add-cart {
-    padding: .8em 1.2em
-  }
-
-  .series-display-image {
-    width:50%;
-  }
-} */
+}

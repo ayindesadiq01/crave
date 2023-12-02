@@ -1524,10 +1524,9 @@ form button {
   .popular-menu {
     margin: 0 auto;
   }
-}
-
-@media (min-width: 1000px) {
-
+  .testimonial-page {
+    margin-bottom: 10em;
+  }
 }
 
 @media (min-width: 1024px) {
